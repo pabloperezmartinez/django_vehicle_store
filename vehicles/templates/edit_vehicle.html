@@ -1,0 +1,14 @@
+<!-- edit_vehicle.html -->
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Delete Vehicle{% endblock %}
+
+{% block content %}
+    <h1>Edit Vehicle</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Vehicle</button>
+    </form>
+{% endblock %}

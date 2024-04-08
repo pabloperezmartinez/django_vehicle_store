@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Vehicle Store{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Vehicle Store</a>
+                <ul class="nav-links">
+                    <li><a href="{% url 'vehicle_list' %}">Inicio</a></li>
+                    <li><a href="{% url 'vehicle_list' %}">Autos</a></li>
+                    <li><a href="{% url 'add_vehicle' %}">Agregar auto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Vehicle Store. Todos los derechos reservados.</p>
+        </div>
+    </footer>  
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

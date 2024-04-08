@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Vehículos{% endblock %}
+
+{% block content %}
+    <h1>Detalles del Vehículo</h1>
+    <ul>
+        <li><strong>Nombre:</strong> {{ vehicle.name }}</li>
+        <li><strong>Marca:</strong> {{ vehicle.brand }}</li>
+        <li><strong>Modelo:</strong> {{ vehicle.model }}</li>
+        <li><strong>Año:</strong> {{ vehicle.year }}</li>
+        <li><strong>Precio:</strong> {{ vehicle.price }}</li>
+        <li><strong>Imagen:</strong> <img src="{{ vehicle.image.url }}" alt="Imagen del vehículo"></li>
+    </ul>
+    <div>
+        <a href="{% url 'edit_vehicle' vehicle.id %}">Editar</a>
+        <a href="{% url 'delete_vehicle' vehicle.id %}">Eliminar</a>
+    </div>
+{% endblock %}

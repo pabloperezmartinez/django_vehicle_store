@@ -1,0 +1,17 @@
+<!-- vehicle_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Lista de Vehículos{% endblock %}
+
+{% block content %}
+    <h1>Lista de Vehículos</h1>
+    
+    <ul>
+        {% for vehicle in vehicle_list %}
+            <li>
+                <a href="{% url 'vehicle_detail' vehicle.id %}">{{ vehicle.name }}</a>
+                <img src="{{ vehicle.image.url }}" alt="{{ vehicle.name }} Image" >
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
