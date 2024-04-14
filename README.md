@@ -1,7 +1,7 @@
 # Ejemplo Django + React
 Este es un ejemplo sencillo usando Django para una tienda de vehículos
 
-## Todo
+## To-do
 La carga de archivos no funciona correctamente
 
 ## Autor
